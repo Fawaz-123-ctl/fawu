@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0b1020;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background: #11182b;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 25px;
+            color: #00e5ff;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 22px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #00e5ff;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #00e5ff;
+        }
+
+        .hero p {
+            color: #b9c2d9;
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background: #00e5ff;
+            color: #07111e;
+            padding: 13px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
+        section {
+            padding: 75px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 35px;
+            margin-bottom: 30px;
+            color: #00e5ff;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+            color: #c4cce0;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .skill {
+            background: #18233b;
+            padding: 25px 40px;
+            border-radius: 12px;
+            border: 1px solid #00e5ff;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-8px);
+            background: #203653;
+        }
+
+        .contact p {
+            margin: 15px;
+            color: #c4cce0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #11182b;
+            color: #aaa;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">MyPortfolio.</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="hero" id="home">
+        <h1>Hello, I'm <span>Alex!</span></h1>
+        <p>Web Developer | Designer | Creative Thinker</p>
+        <a href="#about" class="btn">Explore More</a>
+    </div>
+
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <p>
+            Welcome to my personal portfolio website!
+            I love creating beautiful websites and learning
+            new technologies. My goal is to build amazing
+            digital experiences.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Python</div>
+            <div class="skill">Web Design</div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: alex@example.com</p>
+        <p>Phone: +91 9876543210</p>
+        <a href="mailto:alex@example.com" class="btn">
+            Send Email
+        </a>
+    </section>
+
+    <footer>
+        <p>© 2026 Alex Portfolio. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
