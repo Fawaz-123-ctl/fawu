@@ -3,68 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Fawaz Muhammed Ali P C | Portfolio</title>
+    
+    <!-- Google Fonts for Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg: #121212;
-            --header: #1e1e1e;
-            --card: #242424;
+            --bg: #0b0c10;
+            --header: rgba(11, 12, 16, 0.85);
+            --card: rgba(25, 27, 38, 0.7);
             --text: #ffffff;
-            --muted: #b0b0b0;
+            --muted: #a0a6b8;
             --accent: #ffd700;
+            --accent-gradient: linear-gradient(135deg, #ffd700 0%, #ffaa00 100%);
+            --border: rgba(255, 215, 0, 0.2);
             --shadow: rgba(255, 215, 0, 0.15);
         }
 
         body.light {
-            --bg: #ffffff;
-            --header: #f8f9fa;
-            --card: #fdfdfd;
-            --text: #212529;
-            --muted: #6c757d;
-            --accent: #d4a300;
-            --shadow: rgba(212, 163, 0, 0.2);
+            --bg: #f8f9fc;
+            --header: rgba(248, 249, 252, 0.85);
+            --card: rgba(255, 255, 255, 0.8);
+            --text: #1a1d26;
+            --muted: #626c84;
+            --accent: #e5b800;
+            --accent-gradient: linear-gradient(135deg, #f5c518 0%, #d49a00 100%);
+            --border: rgba(229, 184, 0, 0.3);
+            --shadow: rgba(229, 184, 0, 0.15);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: 'Outfit', sans-serif;
             scroll-behavior: smooth;
         }
 
         body {
             background: var(--bg);
             color: var(--text);
-            transition: 0.4s;
+            transition: background 0.4s ease, color 0.4s ease;
+            overflow-x: hidden;
         }
 
         /* HEADER */
-
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 22px 8%;
+            padding: 20px 8%;
             background: var(--header);
+            backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
         }
 
         .logo {
-            font-size: 25px;
-            color: var(--accent);
-            font-weight: bold;
+            font-size: 24px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            letter-spacing: 1px;
         }
 
         nav {
             display: flex;
             align-items: center;
-            gap: 22px;
+            gap: 25px;
         }
 
         nav a {
@@ -72,6 +82,7 @@
             text-decoration: none;
             transition: 0.3s;
             font-size: 15px;
+            font-weight: 500;
         }
 
         nav a:hover {
@@ -79,91 +90,109 @@
         }
 
         #themeBtn {
-            background: var(--accent);
-            color: #121212;
+            background: var(--accent-gradient);
+            color: #111;
             border: none;
-            padding: 10px 17px;
-            border-radius: 25px;
+            padding: 10px 18px;
+            border-radius: 30px;
             cursor: pointer;
-            font-weight: bold;
-            transition: 0.3s;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px var(--shadow);
         }
 
         #themeBtn:hover {
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
 
-        /* HERO */
-
+        /* HERO SECTION */
         .hero {
-            min-height: 90vh;
+            min-height: 88vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 30px;
-            background: radial-gradient(circle at top, rgba(255, 215, 0, 0.08), transparent 65%);
+            background: radial-gradient(circle at 50% 20%, rgba(255, 215, 0, 0.12), transparent 60%);
         }
 
         .hero h1 {
-            font-size: clamp(35px, 6vw, 65px);
-            margin-bottom: 20px;
-            animation: fadeIn 1.2s ease;
+            font-size: clamp(40px, 6vw, 70px);
+            margin-bottom: 15px;
+            font-weight: 800;
+            animation: fadeIn 1s ease;
         }
 
         .hero h1 span {
-            color: var(--accent);
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero p {
             color: var(--muted);
-            font-size: 19px;
-            margin-bottom: 30px;
-            animation: fadeIn 1.8s ease;
+            font-size: 20px;
+            margin-bottom: 35px;
+            font-weight: 400;
+            animation: fadeIn 1.4s ease;
         }
 
         .btn {
             display: inline-block;
-            background: var(--accent);
-            color: #121212;
-            padding: 14px 30px;
-            border-radius: 30px;
+            background: var(--accent-gradient);
+            color: #111;
+            padding: 14px 32px;
+            border-radius: 35px;
             text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
+            font-weight: 700;
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 6px 20px var(--shadow);
         }
 
         .btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px var(--shadow);
+            transform: translateY(-4px) scale(1.03);
+            box-shadow: 0 10px 25px var(--shadow);
         }
 
         /* SECTIONS */
-
         section {
-            padding: 80px 8%;
+            padding: 90px 8%;
             text-align: center;
         }
 
         section h2 {
-            font-size: 35px;
-            margin-bottom: 35px;
-            color: var(--accent);
+            font-size: 38px;
+            margin-bottom: 40px;
+            font-weight: 700;
+            color: var(--text);
+            position: relative;
+            display: inline-block;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            background: var(--accent-gradient);
+            bottom: -10px;
+            left: 25%;
+            border-radius: 2px;
         }
 
         /* ABOUT */
-
         .about p {
-            max-width: 750px;
+            max-width: 800px;
             margin: auto;
-            line-height: 1.9;
+            line-height: 2;
             color: var(--muted);
-            font-size: 17px;
+            font-size: 18px;
+            font-weight: 300;
         }
 
         /* SKILLS */
-
         .skills {
             display: flex;
             justify-content: center;
@@ -173,114 +202,128 @@
 
         .skill {
             background: var(--card);
-            padding: 25px 40px;
-            border-radius: 15px;
-            border: 1px solid var(--accent);
+            backdrop-filter: blur(10px);
+            padding: 20px 35px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
             transition: 0.3s;
-            font-weight: bold;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
 
         .skill:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 5px 20px var(--shadow);
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 8px 25px var(--shadow);
         }
 
         /* EXPERIENCE */
-
         .experience-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 25px;
+            gap: 30px;
         }
 
         .experience-card {
             background: var(--card);
-            border-radius: 15px;
-            padding: 30px;
-            max-width: 600px;
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 35px;
+            max-width: 650px;
             width: 100%;
-            border: 1px solid var(--accent);
+            border: 1px solid var(--border);
             transition: 0.3s;
             text-align: left;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
         .experience-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 5px 20px var(--shadow);
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 35px var(--shadow);
         }
 
         .experience-card h3 {
             color: var(--accent);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+            font-size: 22px;
         }
 
         .experience-card h4 {
             color: var(--text);
-            margin-bottom: 15px;
+            margin-bottom: 18px;
             font-size: 16px;
+            font-weight: 500;
+            opacity: 0.9;
         }
 
         .experience-card p {
             color: var(--muted);
-            line-height: 1.7;
+            line-height: 1.8;
+            font-size: 16px;
         }
 
         /* PROJECTS */
-
         .projects {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 25px;
+            gap: 30px;
         }
 
         .project {
             background: var(--card);
-            border-radius: 15px;
-            padding: 30px;
-            width: 280px;
-            border: 1px solid var(--accent);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 35px;
+            width: 310px;
+            border: 1px solid var(--border);
             transition: 0.3s;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
         .project:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 5px 20px var(--shadow);
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 35px var(--shadow);
         }
 
         .project h3 {
             color: var(--accent);
             margin-bottom: 15px;
+            font-size: 20px;
         }
 
         .project p {
             color: var(--muted);
             line-height: 1.7;
+            font-size: 15px;
         }
 
         /* CONTACT */
-
         .contact p {
-            margin: 18px;
+            margin: 12px 0;
             color: var(--muted);
+            font-size: 18px;
         }
 
         /* FOOTER */
-
         footer {
             text-align: center;
-            padding: 25px;
+            padding: 30px;
             background: var(--header);
+            border-top: 1px solid var(--border);
             color: var(--muted);
+            font-size: 14px;
         }
 
         /* ANIMATIONS */
-
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(25px);
+                transform: translateY(20px);
             }
             to {
                 opacity: 1;
@@ -288,37 +331,28 @@
             }
         }
 
-        /* MOBILE RESPONSIVE */
-
-        @media(max-width: 700px) {
+        /* RESPONSIVE */
+        @media(max-width: 768px) {
             header {
                 flex-direction: column;
-                gap: 18px;
+                gap: 15px;
+                padding: 15px 5%;
             }
 
             nav {
-                gap: 12px;
+                gap: 15px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
 
-            nav a {
-                font-size: 13px;
-            }
-
             .hero h1 {
-                font-size: 38px;
+                font-size: 34px;
             }
 
             section {
-                padding: 60px 5%;
-            }
-
-            .skill {
-                padding: 20px 25px;
+                padding: 70px 5%;
             }
         }
-
     </style>
 </head>
 
@@ -341,7 +375,7 @@
     <!-- HOME -->
     <div class="hero" id="home">
         <h1>
-            Hello, I'm
+            Hello, I'm <br>
             <span>Fawaz Muhammed Ali P C</span>
         </h1>
         <p>Web Developer | Designer | Creative Thinker</p>
@@ -392,15 +426,15 @@
         <div class="projects">
             <div class="project">
                 <h3>Portfolio Website</h3>
-                <p>A personal portfolio website built using HTML, CSS and JavaScript.</p>
+                <p>A personal portfolio website built using HTML, CSS and JavaScript with advanced UI/UX.</p>
             </div>
             <div class="project">
                 <h3>Web Design</h3>
-                <p>Creative and responsive website designs with modern layouts and attractive colors.</p>
+                <p>Creative and responsive website designs with modern layouts and attractive color harmonies.</p>
             </div>
             <div class="project">
                 <h3>JavaScript Projects</h3>
-                <p>Interactive web applications using JavaScript and modern web technologies.</p>
+                <p>Interactive web applications using JavaScript and modern styling frameworks.</p>
             </div>
         </div>
     </section>
@@ -408,37 +442,8 @@
     <!-- CONTACT -->
     <section class="contact" id="contact">
         <h2>Contact Me</h2>
-        <p>Name: Fawaz Muhammed Ali P C</p>
-        <p>Email: fawazmuhammedali123@gmail.com</p>
-        <p>Phone: +91 7510112814</p>
-        <a href="mailto:fawazmuhammedali123@gmail.com" class="btn">Send Email</a>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Fawaz Muhammed Ali P C. All Rights Reserved.</p>
-    </footer>
-
-    <!-- JAVASCRIPT -->
-    <script>
-        function changeTheme() {
-            document.body.classList.toggle("light");
-            const btn = document.getElementById("themeBtn");
-            if (document.body.classList.contains("light")) {
-                btn.innerHTML = "🌙 Dark";
-                localStorage.setItem("theme", "light");
-            } else {
-                btn.innerHTML = "☀️ Light";
-                localStorage.setItem("theme", "dark");
-            }
-        }
-
-        const savedTheme = localStorage.getItem("theme");
-        if (savedTheme === "light") {
-            document.body.classList.add("light");
-            document.getElementById("themeBtn").innerHTML = "🌙 Dark";
-        }
-    </script>
-
-</body>
-</html>
+        <p><strong>Name:</strong> Fawaz Muhammed Ali P C</p>
+        <p><strong>Email:</strong> fawazmuhammedali123@gmail.com</p>
+        <p><strong>Phone:</strong> +91 7510112814</p>
+        <br>
+        <a href="mailto:fawazmuhammedali123
