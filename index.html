@@ -8,23 +8,23 @@
 
     <style>
         :root {
-            --bg: #080d1c;
-            --header: #10182d;
-            --card: #17223d;
+            --bg: #0b0f0e;
+            --header: #121917;
+            --card: #18221e;
             --text: #ffffff;
-            --muted: #b9c2d9;
-            --accent: #00e5ff;
-            --shadow: rgba(0, 229, 255, 0.15);
+            --muted: #a3b3ad;
+            --accent: #00d26a; /* Professional Emerald Green */
+            --shadow: rgba(0, 210, 106, 0.15);
         }
 
         body.light {
-            --bg: #f1f5ff;
+            --bg: #f4f8f6;
             --header: #ffffff;
             --card: #ffffff;
-            --text: #172033;
-            --muted: #58647b;
-            --accent: #635bff;
-            --shadow: rgba(99, 91, 255, 0.15);
+            --text: #111c18;
+            --muted: #566861;
+            --accent: #008f45; /* Deep Executive Emerald */
+            --shadow: rgba(0, 143, 69, 0.15);
         }
 
         * {
@@ -80,7 +80,7 @@
 
         #themeBtn {
             background: var(--accent);
-            color: #07111e;
+            color: #ffffff;
             border: none;
             padding: 10px 17px;
             border-radius: 25px;
@@ -104,7 +104,7 @@
             text-align: center;
             padding: 30px;
             background:
-                radial-gradient(circle at top, #29265d66, transparent 65%);
+                radial-gradient(circle at top, rgba(0, 210, 106, 0.12), transparent 65%);
         }
 
         .hero h1 {
@@ -127,7 +127,7 @@
         .btn {
             display: inline-block;
             background: var(--accent);
-            color: #07111e;
+            color: #ffffff;
             padding: 14px 30px;
             border-radius: 30px;
             text-decoration: none;
@@ -269,292 +269,6 @@
 
         /* FOOTER */
 
-        <footer>
+        footer {
             text-align: center;
             padding: 25px;
-            background: var(--header);
-            color: var(--muted);
-        }
-
-        /* ANIMATIONS */
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* MOBILE RESPONSIVE */
-
-        @media(max-width: 700px) {
-
-            header {
-                flex-direction: column;
-                gap: 18px;
-            }
-
-            nav {
-                gap: 12px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            nav a {
-                font-size: 13px;
-            }
-
-            .hero h1 {
-                font-size: 38px;
-            }
-
-            section {
-                padding: 60px 5%;
-            }
-
-            .skill {
-                padding: 20px 25px;
-            }
-        }
-
-    </style>
-</head>
-
-<body>
-
-    <!-- HEADER -->
-
-    <header>
-
-        <div class="logo">NADEER PC</div>
-
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#experience">Experience</a>
-            <a href="#projects">Services</a>
-            <a href="#contact">Contact</a>
-
-            <button id="themeBtn" onclick="changeTheme()">
-                ☀️ Light
-            </button>
-        </nav>
-
-    </header>
-
-
-    <!-- HOME -->
-
-    <div class="hero" id="home">
-
-        <h1>
-            Hello, I'm
-            <span>Nadeer PC</span>
-        </h1>
-
-        <p>
-            Chartered Accountant | CEO of A3 Consulting Company
-        </p>
-
-        <a href="#about" class="btn">
-            Explore My Portfolio
-        </a>
-
-    </div>
-
-
-    <!-- ABOUT -->
-
-    <section class="about" id="about">
-
-        <h2>About Me</h2>
-
-        <p>
-            Hello! My name is Nadeer PC. 
-            Welcome to my professional portfolio website. 
-            I am a Chartered Accountant with over 5 years of expertise in taxation and accounting. 
-            Currently, I serve as the CEO of A3 Consulting Company, a globally placed organization dedicated to delivering top-tier financial, tax, and corporate consulting solutions. 
-            My mission is to drive financial clarity and excellence for clients worldwide.
-        </p>
-
-    </section>
-
-
-    <!-- SKILLS -->
-
-    <section id="skills">
-
-        <h2>Expertise & Skills</h2>
-
-        <div class="skills">
-
-            <div class="skill">Taxation</div>
-
-            <div class="skill">Accounting</div>
-
-            <div class="skill">Financial Advisory</div>
-
-            <div class="skill">Corporate Leadership</div>
-
-            <div class="skill">Global Compliance</div>
-
-            <div class="skill">Strategic Planning</div>
-
-        </div>
-
-    </section>
-
-
-    <!-- EXPERIENCE -->
-
-    <section id="experience">
-
-        <h2>Work Experience</h2>
-
-        <div class="experience-container">
-
-            <div class="experience-card">
-                <h3>CEO & Founder</h3>
-                <h4>A3 Consulting Company | Globally Placed</h4>
-                <p>
-                    Leading a globally placed consulting firm with over 5 years of hands-on experience in advanced taxation, accounting frameworks, and comprehensive corporate strategy. Directing global operations and providing expert financial guidance to high-value international clients.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PROJECTS/SERVICES -->
-
-    <section id="projects">
-
-        <h2>Core Services</h2>
-
-        <div class="projects">
-
-            <div class="project">
-
-                <h3>Tax Strategy & Compliance</h3>
-
-                <p>
-                    Comprehensive domestic and international tax planning, filings, and regulatory compliance services.
-                </p>
-
-            </div>
-
-
-            <div class="project">
-
-                <h3>Corporate Accounting</h3>
-
-                <p>
-                    End-to-end accounting management, auditing support, and financial statement analysis for global businesses.
-                </p>
-
-            </div>
-
-
-            <div class="project">
-
-                <h3>Business Consulting</h3>
-
-                <p>
-                    Expert advisory services through A3 Consulting Company to optimize business structuring and financial growth.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section class="contact" id="contact">
-
-        <h2>Contact Me</h2>
-
-        <p>
-            Name: Nadeer PC
-        </p>
-
-        <p>
-            Email: nadeerpc123@gmail.com
-        </p>
-
-        <p>
-            Phone: +91 7510112814
-        </p>
-
-        <a href="mailto:fawazmuhammedali123@gmail.com" class="btn">
-            Send Email
-        </a>
-
-    </section>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <p>
-            © 2026 Nadeer PC. All Rights Reserved.
-        </p>
-
-    </footer>
-
-
-    <!-- JAVASCRIPT -->
-
-    <script>
-
-        // CHANGE THEME
-
-        function changeTheme() {
-
-            document.body.classList.toggle("light");
-
-            const btn = document.getElementById("themeBtn");
-
-            if (document.body.classList.contains("light")) {
-
-                btn.innerHTML = "🌙 Dark";
-
-                localStorage.setItem("theme", "light");
-
-            } else {
-
-                btn.innerHTML = "☀️ Light";
-
-                localStorage.setItem("theme", "dark");
-
-            }
-
-        }
-
-
-        // LOAD SAVED THEME
-
-        const savedTheme = localStorage.getItem("theme");
-
-        if (savedTheme === "light") {
-
-            document.body.classList.add("light");
-
-            document.getElementById("themeBtn").innerHTML = "🌙 Dark";
-
-        }
-
-    </script>
-
-</body>
-</html>
