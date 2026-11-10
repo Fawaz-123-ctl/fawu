@@ -3,78 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Fawaz Muhammed Ali P C | Portfolio</title>
-    
-    <!-- Google Fonts for Typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --bg: #0b0c10;
-            --header: rgba(11, 12, 16, 0.85);
-            --card: rgba(25, 27, 38, 0.7);
+            --bg: #080d1c;
+            --header: #10182d;
+            --card: #17223d;
             --text: #ffffff;
-            --muted: #a0a6b8;
-            --accent: #ffd700;
-            --accent-gradient: linear-gradient(135deg, #ffd700 0%, #ffaa00 100%);
-            --border: rgba(255, 215, 0, 0.2);
-            --shadow: rgba(255, 215, 0, 0.15);
+            --muted: #b9c2d9;
+            --accent: #00e5ff;
+            --shadow: rgba(0, 229, 255, 0.15);
         }
 
         body.light {
-            --bg: #f8f9fc;
-            --header: rgba(248, 249, 252, 0.85);
-            --card: rgba(255, 255, 255, 0.8);
-            --text: #1a1d26;
-            --muted: #626c84;
-            --accent: #e5b800;
-            --accent-gradient: linear-gradient(135deg, #f5c518 0%, #d49a00 100%);
-            --border: rgba(229, 184, 0, 0.3);
-            --shadow: rgba(229, 184, 0, 0.15);
+            --bg: #f1f5ff;
+            --header: #ffffff;
+            --card: #ffffff;
+            --text: #172033;
+            --muted: #58647b;
+            --accent: #635bff;
+            --shadow: rgba(99, 91, 255, 0.15);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Outfit', sans-serif;
+            font-family: Arial, sans-serif;
             scroll-behavior: smooth;
         }
 
         body {
             background: var(--bg);
             color: var(--text);
-            transition: background 0.4s ease, color 0.4s ease;
-            overflow-x: hidden;
+            transition: 0.4s;
         }
 
         /* HEADER */
+
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 8%;
+            padding: 22px 8%;
             background: var(--header);
-            backdrop-filter: blur(12px);
             position: sticky;
             top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border);
+            z-index: 100;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
         }
 
         .logo {
-            font-size: 24px;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 800;
-            letter-spacing: 1px;
+            font-size: 25px;
+            color: var(--accent);
+            font-weight: bold;
         }
 
         nav {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 22px;
         }
 
         nav a {
@@ -82,7 +72,6 @@
             text-decoration: none;
             transition: 0.3s;
             font-size: 15px;
-            font-weight: 500;
         }
 
         nav a:hover {
@@ -90,109 +79,92 @@
         }
 
         #themeBtn {
-            background: var(--accent-gradient);
-            color: #111;
+            background: var(--accent);
+            color: #07111e;
             border: none;
-            padding: 10px 18px;
-            border-radius: 30px;
+            padding: 10px 17px;
+            border-radius: 25px;
             cursor: pointer;
-            font-weight: 700;
-            font-size: 14px;
-            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 4px 15px var(--shadow);
+            font-weight: bold;
+            transition: 0.3s;
         }
 
         #themeBtn:hover {
-            transform: scale(1.08);
+            transform: scale(1.05);
         }
 
-        /* HERO SECTION */
+        /* HERO */
+
         .hero {
-            min-height: 88vh;
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 30px;
-            background: radial-gradient(circle at 50% 20%, rgba(255, 215, 0, 0.12), transparent 60%);
+            background:
+                radial-gradient(circle at top, #29265d66, transparent 65%);
         }
 
         .hero h1 {
-            font-size: clamp(40px, 6vw, 70px);
-            margin-bottom: 15px;
-            font-weight: 800;
-            animation: fadeIn 1s ease;
+            font-size: clamp(35px, 6vw, 65px);
+            margin-bottom: 20px;
+            animation: fadeIn 1.2s ease;
         }
 
         .hero h1 span {
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--accent);
         }
 
         .hero p {
             color: var(--muted);
-            font-size: 20px;
-            margin-bottom: 35px;
-            font-weight: 400;
-            animation: fadeIn 1.4s ease;
+            font-size: 19px;
+            margin-bottom: 30px;
+            animation: fadeIn 1.8s ease;
         }
 
         .btn {
             display: inline-block;
-            background: var(--accent-gradient);
-            color: #111;
-            padding: 14px 32px;
-            border-radius: 35px;
+            background: var(--accent);
+            color: #07111e;
+            padding: 14px 30px;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: 700;
-            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 6px 20px var(--shadow);
+            font-weight: bold;
+            transition: 0.3s;
         }
 
         .btn:hover {
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 10px 25px var(--shadow);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px var(--shadow);
         }
 
         /* SECTIONS */
+
         section {
-            padding: 90px 8%;
+            padding: 80px 8%;
             text-align: center;
         }
 
         section h2 {
-            font-size: 38px;
-            margin-bottom: 40px;
-            font-weight: 700;
-            color: var(--text);
-            position: relative;
-            display: inline-block;
-        }
-
-        section h2::after {
-            content: '';
-            position: absolute;
-            width: 50%;
-            height: 4px;
-            background: var(--accent-gradient);
-            bottom: -10px;
-            left: 25%;
-            border-radius: 2px;
+            font-size: 35px;
+            margin-bottom: 35px;
+            color: var(--accent);
         }
 
         /* ABOUT */
+
         .about p {
-            max-width: 800px;
+            max-width: 750px;
             margin: auto;
-            line-height: 2;
+            line-height: 1.9;
             color: var(--muted);
-            font-size: 18px;
-            font-weight: 300;
+            font-size: 17px;
         }
 
         /* SKILLS */
+
         .skills {
             display: flex;
             justify-content: center;
@@ -202,165 +174,165 @@
 
         .skill {
             background: var(--card);
-            backdrop-filter: blur(10px);
-            padding: 20px 35px;
-            border-radius: 16px;
-            border: 1px solid var(--border);
+            padding: 25px 40px;
+            border-radius: 15px;
+            border: 1px solid var(--accent);
             transition: 0.3s;
-            font-weight: 600;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            font-weight: bold;
         }
 
         .skill:hover {
-            transform: translateY(-6px);
-            border-color: var(--accent);
-            box-shadow: 0 8px 25px var(--shadow);
+            transform: translateY(-8px);
+            box-shadow: 0 5px 20px var(--shadow);
         }
 
         /* EXPERIENCE */
+
         .experience-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 25px;
         }
 
         .experience-card {
             background: var(--card);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 35px;
-            max-width: 650px;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 600px;
             width: 100%;
-            border: 1px solid var(--border);
+            border: 1px solid var(--accent);
             transition: 0.3s;
             text-align: left;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
         .experience-card:hover {
-            transform: translateY(-6px);
-            border-color: var(--accent);
-            box-shadow: 0 15px 35px var(--shadow);
+            transform: translateY(-8px);
+            box-shadow: 0 5px 20px var(--shadow);
         }
 
         .experience-card h3 {
             color: var(--accent);
-            margin-bottom: 8px;
-            font-size: 22px;
+            margin-bottom: 10px;
         }
 
         .experience-card h4 {
             color: var(--text);
-            margin-bottom: 18px;
+            margin-bottom: 15px;
             font-size: 16px;
-            font-weight: 500;
-            opacity: 0.9;
         }
 
         .experience-card p {
             color: var(--muted);
-            line-height: 1.8;
-            font-size: 16px;
+            line-height: 1.7;
         }
 
         /* PROJECTS */
+
         .projects {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 25px;
         }
 
         .project {
             background: var(--card);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 35px;
-            width: 310px;
-            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 30px;
+            width: 280px;
+            border: 1px solid var(--accent);
             transition: 0.3s;
-            text-align: left;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
         .project:hover {
-            transform: translateY(-6px);
-            border-color: var(--accent);
-            box-shadow: 0 15px 35px var(--shadow);
+            transform: translateY(-8px);
+            box-shadow: 0 5px 20px var(--shadow);
         }
 
         .project h3 {
             color: var(--accent);
             margin-bottom: 15px;
-            font-size: 20px;
         }
 
         .project p {
             color: var(--muted);
             line-height: 1.7;
-            font-size: 15px;
         }
 
         /* CONTACT */
+
         .contact p {
-            margin: 12px 0;
+            margin: 18px;
             color: var(--muted);
-            font-size: 18px;
         }
 
         /* FOOTER */
+
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 25px;
             background: var(--header);
-            border-top: 1px solid var(--border);
             color: var(--muted);
-            font-size: 14px;
         }
 
         /* ANIMATIONS */
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(25px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
 
-        /* RESPONSIVE */
-        @media(max-width: 768px) {
+        /* MOBILE RESPONSIVE */
+
+        @media(max-width: 700px) {
+
             header {
                 flex-direction: column;
-                gap: 15px;
-                padding: 15px 5%;
+                gap: 18px;
             }
 
             nav {
-                gap: 15px;
+                gap: 12px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
 
+            nav a {
+                font-size: 13px;
+            }
+
             .hero h1 {
-                font-size: 34px;
+                font-size: 38px;
             }
 
             section {
-                padding: 70px 5%;
+                padding: 60px 5%;
+            }
+
+            .skill {
+                padding: 20px 25px;
             }
         }
+
     </style>
 </head>
 
 <body>
 
     <!-- HEADER -->
+
     <header>
+
         <div class="logo">FAWAZ.</div>
+
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -368,48 +340,92 @@
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
-            <button id="themeBtn" onclick="changeTheme()">☀️ Light</button>
+
+            <button id="themeBtn" onclick="changeTheme()">
+                ☀️ Light
+            </button>
         </nav>
+
     </header>
 
+
     <!-- HOME -->
+
     <div class="hero" id="home">
+
         <h1>
-            Hello, I'm <br>
+            Hello, I'm
             <span>Fawaz Muhammed Ali P C</span>
         </h1>
-        <p>Web Developer | Designer | Creative Thinker</p>
-        <a href="#about" class="btn">Explore My Portfolio</a>
+
+        <p>
+            Web Developer | Designer | Creative Thinker
+        </p>
+
+        <a href="#about" class="btn">
+            Explore My Portfolio
+        </a>
+
     </div>
 
+
     <!-- ABOUT -->
+
     <section class="about" id="about">
+
         <h2>About Me</h2>
+
         <p>
-            Hello! My name is Fawaz Muhammed Ali P C. Welcome to my personal portfolio website. 
-            I am passionate about technology, web development and creative design. 
-            I enjoy learning new skills, exploring modern technologies and creating beautiful digital experiences. 
-            My goal is to improve my knowledge and build creative projects that make a difference.
+            Hello! My name is Fawaz Muhammed Ali P C.
+
+            Welcome to my personal portfolio website.
+            I am passionate about technology, web development
+            and creative design.
+
+            I enjoy learning new skills, exploring modern
+            technologies and creating beautiful digital
+            experiences.
+
+            My goal is to improve my knowledge and build
+            creative projects that make a difference.
         </p>
+
     </section>
+
 
     <!-- SKILLS -->
+
     <section id="skills">
+
         <h2>My Skills</h2>
+
         <div class="skills">
+
             <div class="skill">HTML</div>
+
             <div class="skill">CSS</div>
+
             <div class="skill">JavaScript</div>
+
             <div class="skill">Python</div>
+
             <div class="skill">Web Design</div>
+
             <div class="skill">Problem Solving</div>
+
         </div>
+
     </section>
 
+
     <!-- EXPERIENCE -->
+
     <section id="experience">
+
         <h2>Work Experience</h2>
+
         <div class="experience-container">
+
             <div class="experience-card">
                 <h3>Professional Web Developer & Designer</h3>
                 <h4>5+ Years of Industry Excellence</h4>
@@ -417,33 +433,139 @@
                     Recognized as an outstanding employee on a global scale. Bringing over 5 years of hands-on experience building, scaling, and optimizing web applications, high-performance interfaces, and creative digital designs with a proven record of excellence.
                 </p>
             </div>
+
         </div>
+
     </section>
+
 
     <!-- PROJECTS -->
+
     <section id="projects">
+
         <h2>My Projects</h2>
+
         <div class="projects">
+
             <div class="project">
+
                 <h3>Portfolio Website</h3>
-                <p>A personal portfolio website built using HTML, CSS and JavaScript with advanced UI/UX.</p>
+
+                <p>
+                    A personal portfolio website built using
+                    HTML, CSS and JavaScript.
+                </p>
+
             </div>
+
+
             <div class="project">
+
                 <h3>Web Design</h3>
-                <p>Creative and responsive website designs with modern layouts and attractive color harmonies.</p>
+
+                <p>
+                    Creative and responsive website designs
+                    with modern layouts and attractive colors.
+                </p>
+
             </div>
+
+
             <div class="project">
+
                 <h3>JavaScript Projects</h3>
-                <p>Interactive web applications using JavaScript and modern styling frameworks.</p>
+
+                <p>
+                    Interactive web applications using
+                    JavaScript and modern web technologies.
+                </p>
+
             </div>
+
         </div>
+
     </section>
 
+
     <!-- CONTACT -->
+
     <section class="contact" id="contact">
+
         <h2>Contact Me</h2>
-        <p><strong>Name:</strong> Fawaz Muhammed Ali P C</p>
-        <p><strong>Email:</strong> fawazmuhammedali123@gmail.com</p>
-        <p><strong>Phone:</strong> +91 7510112814</p>
-        <br>
-        <a href="mailto:fawazmuhammedali123
+
+        <p>
+            Name: Fawaz Muhammed Ali P C
+        </p>
+
+        <p>
+            Email: fawazmuhammedali123@gmail.com
+        </p>
+
+        <p>
+            Phone: +91 7510112814
+        </p>
+
+        <a href="mailto:fawazmuhammedali123@gmail.com" class="btn">
+            Send Email
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Fawaz Muhammed Ali P C.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        // CHANGE THEME
+
+        function changeTheme() {
+
+            document.body.classList.toggle("light");
+
+            const btn = document.getElementById("themeBtn");
+
+            if (document.body.classList.contains("light")) {
+
+                btn.innerHTML = "🌙 Dark";
+
+                localStorage.setItem("theme", "light");
+
+            } else {
+
+                btn.innerHTML = "☀️ Light";
+
+                localStorage.setItem("theme", "dark");
+
+            }
+
+        }
+
+
+        // LOAD SAVED THEME
+
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "light") {
+
+            document.body.classList.add("light");
+
+            document.getElementById("themeBtn").innerHTML = "🌙 Dark";
+
+        }
+
+    </script>
+
+</body>
+</html>
