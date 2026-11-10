@@ -8,23 +8,23 @@
 
     <style>
         :root {
-            --bg: #080d1c;
-            --header: #10182d;
-            --card: #17223d;
+            --bg: #121212;
+            --header: #1e1e1e;
+            --card: #242424;
             --text: #ffffff;
-            --muted: #b9c2d9;
-            --accent: #00e5ff;
-            --shadow: rgba(0, 229, 255, 0.15);
+            --muted: #b0b0b0;
+            --accent: #ffd700;
+            --shadow: rgba(255, 215, 0, 0.15);
         }
 
         body.light {
-            --bg: #f1f5ff;
-            --header: #ffffff;
-            --card: #ffffff;
-            --text: #172033;
-            --muted: #58647b;
-            --accent: #635bff;
-            --shadow: rgba(99, 91, 255, 0.15);
+            --bg: #ffffff;
+            --header: #f8f9fa;
+            --card: #fdfdfd;
+            --text: #212529;
+            --muted: #6c757d;
+            --accent: #d4a300;
+            --shadow: rgba(212, 163, 0, 0.2);
         }
 
         * {
@@ -52,7 +52,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
         }
 
         .logo {
@@ -80,7 +80,7 @@
 
         #themeBtn {
             background: var(--accent);
-            color: #07111e;
+            color: #121212;
             border: none;
             padding: 10px 17px;
             border-radius: 25px;
@@ -103,8 +103,7 @@
             align-items: center;
             text-align: center;
             padding: 30px;
-            background:
-                radial-gradient(circle at top, #29265d66, transparent 65%);
+            background: radial-gradient(circle at top, rgba(255, 215, 0, 0.08), transparent 65%);
         }
 
         .hero h1 {
@@ -127,7 +126,7 @@
         .btn {
             display: inline-block;
             background: var(--accent);
-            color: #07111e;
+            color: #121212;
             padding: 14px 30px;
             border-radius: 30px;
             text-decoration: none;
@@ -283,7 +282,6 @@
                 opacity: 0;
                 transform: translateY(25px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -293,7 +291,6 @@
         /* MOBILE RESPONSIVE */
 
         @media(max-width: 700px) {
-
             header {
                 flex-direction: column;
                 gap: 18px;
@@ -328,11 +325,8 @@
 <body>
 
     <!-- HEADER -->
-
     <header>
-
         <div class="logo">FAWAZ.</div>
-
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
@@ -340,92 +334,48 @@
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
-
-            <button id="themeBtn" onclick="changeTheme()">
-                ☀️ Light
-            </button>
+            <button id="themeBtn" onclick="changeTheme()">☀️ Light</button>
         </nav>
-
     </header>
 
-
     <!-- HOME -->
-
     <div class="hero" id="home">
-
         <h1>
             Hello, I'm
             <span>Fawaz Muhammed Ali P C</span>
         </h1>
-
-        <p>
-            Web Developer | Designer | Creative Thinker
-        </p>
-
-        <a href="#about" class="btn">
-            Explore My Portfolio
-        </a>
-
+        <p>Web Developer | Designer | Creative Thinker</p>
+        <a href="#about" class="btn">Explore My Portfolio</a>
     </div>
 
-
     <!-- ABOUT -->
-
     <section class="about" id="about">
-
         <h2>About Me</h2>
-
         <p>
-            Hello! My name is Fawaz Muhammed Ali P C.
-
-            Welcome to my personal portfolio website.
-            I am passionate about technology, web development
-            and creative design.
-
-            I enjoy learning new skills, exploring modern
-            technologies and creating beautiful digital
-            experiences.
-
-            My goal is to improve my knowledge and build
-            creative projects that make a difference.
+            Hello! My name is Fawaz Muhammed Ali P C. Welcome to my personal portfolio website. 
+            I am passionate about technology, web development and creative design. 
+            I enjoy learning new skills, exploring modern technologies and creating beautiful digital experiences. 
+            My goal is to improve my knowledge and build creative projects that make a difference.
         </p>
-
     </section>
-
 
     <!-- SKILLS -->
-
     <section id="skills">
-
         <h2>My Skills</h2>
-
         <div class="skills">
-
             <div class="skill">HTML</div>
-
             <div class="skill">CSS</div>
-
             <div class="skill">JavaScript</div>
-
             <div class="skill">Python</div>
-
             <div class="skill">Web Design</div>
-
             <div class="skill">Problem Solving</div>
-
         </div>
-
     </section>
 
-
     <!-- EXPERIENCE -->
-
     <section id="experience">
-
         <h2>Work Experience</h2>
-
         <div class="experience-container">
-
             <div class="experience-card">
                 <h3>Professional Web Developer & Designer</h3>
                 <h4>5+ Years of Industry Excellence</h4>
@@ -433,138 +383,61 @@
                     Recognized as an outstanding employee on a global scale. Bringing over 5 years of hands-on experience building, scaling, and optimizing web applications, high-performance interfaces, and creative digital designs with a proven record of excellence.
                 </p>
             </div>
-
         </div>
-
     </section>
-
 
     <!-- PROJECTS -->
-
     <section id="projects">
-
         <h2>My Projects</h2>
-
         <div class="projects">
-
             <div class="project">
-
                 <h3>Portfolio Website</h3>
-
-                <p>
-                    A personal portfolio website built using
-                    HTML, CSS and JavaScript.
-                </p>
-
+                <p>A personal portfolio website built using HTML, CSS and JavaScript.</p>
             </div>
-
-
             <div class="project">
-
                 <h3>Web Design</h3>
-
-                <p>
-                    Creative and responsive website designs
-                    with modern layouts and attractive colors.
-                </p>
-
+                <p>Creative and responsive website designs with modern layouts and attractive colors.</p>
             </div>
-
-
             <div class="project">
-
                 <h3>JavaScript Projects</h3>
-
-                <p>
-                    Interactive web applications using
-                    JavaScript and modern web technologies.
-                </p>
-
+                <p>Interactive web applications using JavaScript and modern web technologies.</p>
             </div>
-
         </div>
-
     </section>
-
 
     <!-- CONTACT -->
-
     <section class="contact" id="contact">
-
         <h2>Contact Me</h2>
-
-        <p>
-            Name: Fawaz Muhammed Ali P C
-        </p>
-
-        <p>
-            Email: fawazmuhammedali123@gmail.com
-        </p>
-
-        <p>
-            Phone: +91 7510112814
-        </p>
-
-        <a href="mailto:fawazmuhammedali123@gmail.com" class="btn">
-            Send Email
-        </a>
-
+        <p>Name: Fawaz Muhammed Ali P C</p>
+        <p>Email: fawazmuhammedali123@gmail.com</p>
+        <p>Phone: +91 7510112814</p>
+        <a href="mailto:fawazmuhammedali123@gmail.com" class="btn">Send Email</a>
     </section>
 
-
     <!-- FOOTER -->
-
     <footer>
-
-        <p>
-            © 2026 Fawaz Muhammed Ali P C.
-            All Rights Reserved.
-        </p>
-
+        <p>© 2026 Fawaz Muhammed Ali P C. All Rights Reserved.</p>
     </footer>
 
-
     <!-- JAVASCRIPT -->
-
     <script>
-
-        // CHANGE THEME
-
         function changeTheme() {
-
             document.body.classList.toggle("light");
-
             const btn = document.getElementById("themeBtn");
-
             if (document.body.classList.contains("light")) {
-
                 btn.innerHTML = "🌙 Dark";
-
                 localStorage.setItem("theme", "light");
-
             } else {
-
                 btn.innerHTML = "☀️ Light";
-
                 localStorage.setItem("theme", "dark");
-
             }
-
         }
-
-
-        // LOAD SAVED THEME
 
         const savedTheme = localStorage.getItem("theme");
-
         if (savedTheme === "light") {
-
             document.body.classList.add("light");
-
             document.getElementById("themeBtn").innerHTML = "🌙 Dark";
-
         }
-
     </script>
 
 </body>
