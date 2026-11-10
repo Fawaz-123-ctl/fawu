@@ -4,9 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+
+    <title>Fawaz Muhammed Ali P C | Portfolio</title>
 
     <style>
+        :root {
+            --bg: #080d1c;
+            --header: #10182d;
+            --card: #17223d;
+            --text: #ffffff;
+            --muted: #b9c2d9;
+            --accent: #00e5ff;
+            --shadow: rgba(0, 229, 255, 0.15);
+        }
+
+        body.light {
+            --bg: #f1f5ff;
+            --header: #ffffff;
+            --card: #ffffff;
+            --text: #172033;
+            --muted: #58647b;
+            --accent: #635bff;
+            --shadow: rgba(99, 91, 255, 0.15);
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -16,67 +37,99 @@
         }
 
         body {
-            background: #0b1020;
-            color: white;
+            background: var(--bg);
+            color: var(--text);
+            transition: 0.4s;
         }
+
+        /* HEADER */
 
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 22px 8%;
-            background: #11182b;
+            background: var(--header);
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
         }
 
         .logo {
             font-size: 25px;
-            color: #00e5ff;
+            color: var(--accent);
             font-weight: bold;
         }
 
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
         nav a {
-            color: white;
+            color: var(--text);
             text-decoration: none;
-            margin-left: 22px;
             transition: 0.3s;
+            font-size: 15px;
         }
 
         nav a:hover {
-            color: #00e5ff;
+            color: var(--accent);
         }
 
+        #themeBtn {
+            background: var(--accent);
+            color: #07111e;
+            border: none;
+            padding: 10px 17px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        #themeBtn:hover {
+            transform: scale(1.05);
+        }
+
+        /* HERO */
+
         .hero {
-            min-height: 85vh;
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 30px;
+            background:
+                radial-gradient(circle at top, #29265d66, transparent 65%);
         }
 
         .hero h1 {
-            font-size: 55px;
-            margin-bottom: 15px;
+            font-size: clamp(35px, 6vw, 65px);
+            margin-bottom: 20px;
+            animation: fadeIn 1.2s ease;
         }
 
         .hero h1 span {
-            color: #00e5ff;
+            color: var(--accent);
         }
 
         .hero p {
-            color: #b9c2d9;
+            color: var(--muted);
             font-size: 19px;
             margin-bottom: 30px;
+            animation: fadeIn 1.8s ease;
         }
 
         .btn {
-            background: #00e5ff;
+            display: inline-block;
+            background: var(--accent);
             color: #07111e;
-            padding: 13px 28px;
+            padding: 14px 30px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
@@ -84,27 +137,34 @@
         }
 
         .btn:hover {
-            background: white;
-            transform: scale(1.05);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px var(--shadow);
         }
 
+        /* SECTIONS */
+
         section {
-            padding: 75px 8%;
+            padding: 80px 8%;
             text-align: center;
         }
 
         section h2 {
             font-size: 35px;
-            margin-bottom: 30px;
-            color: #00e5ff;
+            margin-bottom: 35px;
+            color: var(--accent);
         }
 
+        /* ABOUT */
+
         .about p {
-            max-width: 700px;
+            max-width: 750px;
             margin: auto;
-            line-height: 1.8;
-            color: #c4cce0;
+            line-height: 1.9;
+            color: var(--muted);
+            font-size: 17px;
         }
+
+        /* SKILLS */
 
         .skills {
             display: flex;
@@ -114,101 +174,336 @@
         }
 
         .skill {
-            background: #18233b;
+            background: var(--card);
             padding: 25px 40px;
-            border-radius: 12px;
-            border: 1px solid #00e5ff;
+            border-radius: 15px;
+            border: 1px solid var(--accent);
             transition: 0.3s;
+            font-weight: bold;
         }
 
         .skill:hover {
             transform: translateY(-8px);
-            background: #203653;
+            box-shadow: 0 5px 20px var(--shadow);
         }
 
-        .contact p {
-            margin: 15px;
-            color: #c4cce0;
+        /* PROJECTS */
+
+        .projects {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
         }
+
+        .project {
+            background: var(--card);
+            border-radius: 15px;
+            padding: 30px;
+            width: 280px;
+            border: 1px solid var(--accent);
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 5px 20px var(--shadow);
+        }
+
+        .project h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+        }
+
+        .project p {
+            color: var(--muted);
+            line-height: 1.7;
+        }
+
+        /* CONTACT */
+
+        .contact p {
+            margin: 18px;
+            color: var(--muted);
+        }
+
+        /* FOOTER */
 
         footer {
             text-align: center;
             padding: 25px;
-            background: #11182b;
-            color: #aaa;
+            background: var(--header);
+            color: var(--muted);
         }
 
-        @media (max-width: 600px) {
+        /* ANIMATIONS */
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* MOBILE RESPONSIVE */
+
+        @media(max-width: 700px) {
+
             header {
                 flex-direction: column;
                 gap: 18px;
             }
 
+            nav {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
             nav a {
-                margin: 0 7px;
                 font-size: 13px;
             }
 
             .hero h1 {
                 font-size: 38px;
             }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .skill {
+                padding: 20px 25px;
+            }
         }
+
     </style>
 </head>
 
 <body>
 
+    <!-- HEADER -->
+
     <header>
-        <div class="logo">MyPortfolio.</div>
+
+        <div class="logo">FAWAZ.</div>
 
         <nav>
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
+
+            <button id="themeBtn" onclick="changeTheme()">
+                ☀️ Light
+            </button>
         </nav>
+
     </header>
 
+
+    <!-- HOME -->
+
     <div class="hero" id="home">
-        <h1>Hello, I'm <span>Alex!</span></h1>
-        <p>Web Developer | Designer | Creative Thinker</p>
-        <a href="#about" class="btn">Explore More</a>
+
+        <h1>
+            Hello, I'm
+            <span>Fawaz Muhammed Ali P C</span>
+        </h1>
+
+        <p>
+            Web Developer | Designer | Creative Thinker
+        </p>
+
+        <a href="#about" class="btn">
+            Explore My Portfolio
+        </a>
+
     </div>
 
+
+    <!-- ABOUT -->
+
     <section class="about" id="about">
+
         <h2>About Me</h2>
+
         <p>
-            Welcome to my personal portfolio website!
-            I love creating beautiful websites and learning
-            new technologies. My goal is to build amazing
-            digital experiences.
+            Hello! My name is Fawaz Muhammed Ali P C.
+
+            Welcome to my personal portfolio website.
+            I am passionate about technology, web development
+            and creative design.
+
+            I enjoy learning new skills, exploring modern
+            technologies and creating beautiful digital
+            experiences.
+
+            My goal is to improve my knowledge and build
+            creative projects that make a difference.
         </p>
+
     </section>
 
+
+    <!-- SKILLS -->
+
     <section id="skills">
+
         <h2>My Skills</h2>
 
         <div class="skills">
+
             <div class="skill">HTML</div>
+
             <div class="skill">CSS</div>
+
             <div class="skill">JavaScript</div>
+
             <div class="skill">Python</div>
+
             <div class="skill">Web Design</div>
+
+            <div class="skill">Problem Solving</div>
+
         </div>
+
     </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="projects">
+
+            <div class="project">
+
+                <h3>Portfolio Website</h3>
+
+                <p>
+                    A personal portfolio website built using
+                    HTML, CSS and JavaScript.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>Web Design</h3>
+
+                <p>
+                    Creative and responsive website designs
+                    with modern layouts and attractive colors.
+                </p>
+
+            </div>
+
+
+            <div class="project">
+
+                <h3>JavaScript Projects</h3>
+
+                <p>
+                    Interactive web applications using
+                    JavaScript and modern web technologies.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
 
     <section class="contact" id="contact">
+
         <h2>Contact Me</h2>
-        <p>Email: alex@example.com</p>
-        <p>Phone: +91 9876543210</p>
-        <a href="mailto:alex@example.com" class="btn">
+
+        <p>
+            Name: Fawaz Muhammed Ali P C
+        </p>
+
+        <p>
+            Email: Add your email address
+        </p>
+
+        <p>
+            Phone: Add your phone number
+        </p>
+
+        <a href="mailto:yourmail@example.com" class="btn">
             Send Email
         </a>
+
     </section>
 
+
+    <!-- FOOTER -->
+
     <footer>
-        <p>© 2026 Alex Portfolio. All Rights Reserved.</p>
+
+        <p>
+            © 2026 Fawaz Muhammed Ali P C.
+            All Rights Reserved.
+        </p>
+
     </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        // CHANGE THEME
+
+        function changeTheme() {
+
+            document.body.classList.toggle("light");
+
+            const btn = document.getElementById("themeBtn");
+
+            if (document.body.classList.contains("light")) {
+
+                btn.innerHTML = "🌙 Dark";
+
+                localStorage.setItem("theme", "light");
+
+            } else {
+
+                btn.innerHTML = "☀️ Light";
+
+                localStorage.setItem("theme", "dark");
+
+            }
+
+        }
+
+
+        // LOAD SAVED THEME
+
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme === "light") {
+
+            document.body.classList.add("light");
+
+            document.getElementById("themeBtn").innerHTML = "🌙 Dark";
+
+        }
+
+    </script>
 
 </body>
 </html>
